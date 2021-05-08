@@ -18,10 +18,17 @@ parser.add_argument(
     type=str,
     help="Token for the second account",
 )
+parser.add_argument(
+    "path",
+    metavar="path",
+    type=str,
+    help="Path to copy",
+)
 args = parser.parse_args()
 
 token1 = args.token1  # uptobox token of the old account
-token2 = args.token2  # uptobox token of the new account
+token2 = args.token2
+path = args.path  # uptobox token of the new account
 
 
 def alias_path(path):
@@ -79,4 +86,4 @@ def main():
 
 
 if __name__ == "__main__":
-    alias_path("//")
+    alias_path(path)
